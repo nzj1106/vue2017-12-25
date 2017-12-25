@@ -2,7 +2,7 @@
   <div class="head">
     <div class="header">
       <a href="javascript:;" class="go-back" @click="goBack">返回</a>
-      <h4 class="header-cont">商品详情页</h4>
+      <h4 class="header-cont" v-model="title">{{title}}</h4>
     </div>
   </div>
 </template>

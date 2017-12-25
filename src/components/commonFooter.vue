@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="footer">
     <ul class="footer-cont">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
+        <li><router-link to="/">首页</router-link></li>
+        <li><router-link to="add">分类</router-link></li>
+        <li><router-link to="detail">购物车</router-link></li>
+        <li><router-link to="user">我的</router-link></li>
     </ul>
   </div>
 </template>
@@ -28,9 +28,6 @@ export default {
     float: left;
     width: 25%;
     height: 1.8rem;
-    line-height: 1.8rem;
-    font-size: 1.4rem;
-    color: #ff8000;
     text-align: center;
   }
   .footer-cont li:active {
@@ -42,5 +39,12 @@ export default {
     clear: both;
     width: 0;
     height: 0;
+  }
+  .footer-cont li a {
+    font-size: 0.8rem;
+    color: #666;
+    display: inline-block;
+    height: 1.8rem;
+    line-height: 1.8rem;
   }
 </style>

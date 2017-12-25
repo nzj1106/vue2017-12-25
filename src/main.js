@@ -5,6 +5,21 @@ Vue.use(VueResource)
 
 import router from './router/index'
 
+
+
+//通过components下的index.js文件导入组件
+import components from './components/';
+//对导入的组件进行全局组件注册
+Object.keys(components).forEach((key)=>{
+    Vue.component(key,components[key])
+})
+
+/*全局引入VUE YDUI组件*/
+import YDUI from 'vue-ydui'
+import 'vue-ydui/dist/ydui.rem.css';
+
+
+Vue.use(YDUI);
 new Vue({
   el: '#app',
   data () {
@@ -14,7 +29,7 @@ new Vue({
   router
 })
 
-Vue.filter('dCurrency', function(value) {
+/*Vue.filter('dCurrency', function(value) {
   return '￥'+value
 })
 Vue.filter('dTofixed', function(value) {
@@ -36,4 +51,4 @@ Vue.filter('dTofixed', function(value) {
           return value;
       }
   }
-})
+})*/
